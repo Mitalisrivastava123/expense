@@ -1,0 +1,28 @@
+.edit
+{
+    background:darkcyan;
+    color:#fff;
+    padding:10px;
+    width:80px;
+}
+.delete
+{
+    background:red;
+    color:#fff;
+    padding:10px;
+    width:80px;
+}
+.submit
+{
+    background:dodgerblue;
+    color:#fff;
+    padding:10px;
+    width:80px;
+}
+.update
+{
+    background:blueviolet;
+    color:#fff;
+    padding:10px;
+    width:80px; 
+}
