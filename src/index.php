@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+session_destroy();
 
 if(!isset($_SESSION['products']))
 {
@@ -29,11 +29,14 @@ if(isset($_POST["submit"]))
  array_push($_SESSION['products'],array('name'=>$_SESSION["name"],'price'=>$_SESSION["price"],'groceries'=>$_SESSION["groceries"],'income'=>$_SESSION["income"]));
  }
  }
+
+//  code for product remove
 if (isset($_POST["remove"])) {
     $y1 = $_POST["deleting"];
      array_splice($_SESSION['products'],$y1 ,1);   
     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +47,7 @@ if (isset($_POST["remove"])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- code for product update -->
 <?php 
 if(isset($_POST["update"]))
 {
@@ -99,7 +103,7 @@ echo "
 <input type="submit" name="addincome" class="submitbtn" value="AddIncome">
 <input type="submit" name="deleteincome" class="submitbtn" value="DeleteIncome">
 </form>
-
+<!-- code for add income -->
 <?php
 if(isset($_POST["addincome"]))
 {
@@ -112,6 +116,7 @@ if(isset($_POST["addincome"]))
     $_SESSION["income"]=$_POST["income"]+$_SESSION["income"] ;
     }
 }
+// code for delete income
 if(isset($_POST["deleteincome"]))
 {
     $_SESSION["income"] =0;
@@ -145,7 +150,7 @@ echo "<td>" .$v["groceries"]."</td>
 </tr>";
 $sum = $sum + $v["price"]; 
 
-
+// code for expenses calculate category wise
 if($v["groceries"] == 'veggies')
 {
     $sum1 = $sum1 + $v["price"];
@@ -177,6 +182,7 @@ echo "<br>";
 $balancee = $_SESSION["income"] - $sum;
 echo "<h3>Total Balance is : ". $balancee."</h3>";
 
+
 echo "<div class='main1'>";
 echo "<h3 style='color:black;'>Category Wise Expenses Calculated</h3>";
 
@@ -194,3 +200,4 @@ echo "</div>";
 </form>
 </body>
 </html>
+<!-- end -->
