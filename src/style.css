@@ -17,12 +17,42 @@
     background:dodgerblue;
     color:#fff;
     padding:10px;
-    width:80px;
+    width:100px;
 }
 .update
 {
-    background:blueviolet;
+    background: blueviolet;
+    color: #fff;
+    padding: 10px;
+    width: 80px;
+    position: relative;
+    top: 606px;
+    left: 68%;
+
+}
+
+.submitbtn
+{
+    background:darkcyan;
     color:#fff;
     padding:10px;
-    width:80px; 
+    width:100px;  
+    font-size:10px;
+}
+.form1
+{
+    width: 500px;
+    border: 1px solid black;
+    background: #afdcff;
+    padding: 10px;
+    font-size:10px;
+}
+.main1
+{
+    width: 500px;
+    border: 1px solid black;
+    background: #f1feff;
+    padding: 10px;
+    color:#171ed4;
+ 
 }
