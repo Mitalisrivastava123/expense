@@ -1,6 +1,6 @@
 <?php
 session_start();
-session_destroy();
+
 
 if(!isset($_SESSION['products']))
 {
@@ -36,6 +36,7 @@ if (isset($_POST["remove"])) {
      array_splice($_SESSION['products'],$y1 ,1);   
     }
 ?>
+<?php  include 'index1.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,6 +48,7 @@ if (isset($_POST["remove"])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  
     <!-- code for product update -->
 <?php 
 if(isset($_POST["update"]))
@@ -102,6 +104,7 @@ echo "
 <input type="submit" name="submit" class="submit" value="AddExpenses">
 <input type="submit" name="addincome" class="submitbtn" value="AddIncome">
 <input type="submit" name="deleteincome" class="submitbtn" value="DeleteIncome">
+<input  type="submit" name="reset" value="reset">
 </form>
 <!-- code for add income -->
 <?php
@@ -198,6 +201,7 @@ echo "</div>";
 ?>
 
 </form>
+
 </body>
 </html>
 <!-- end -->
